@@ -25,7 +25,7 @@
 # 2 + 1 = 3
 # Constraints:
 
-
+# Time complexit o(2^n)
 class Solution:
     def climbStairs(self, n: int) -> int:
         # if there is nothing do nothing 
@@ -38,4 +38,15 @@ class Solution:
         twoStep = self.climbStairs(n - 2)
         
         return oneStep + twoStep
+
+# O(n) O(1)
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        one, two = 1, 1
+        for i in range(n - 1):
+            temp = one 
+            one = one + two 
+            two = temp 
+        return one 
+
         
